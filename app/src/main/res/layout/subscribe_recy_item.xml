@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/subscribe_recy_item_img"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_80"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_37"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/subscribe_recy_item_name"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxEms="7"
+                android:text="牛肉面牛肉面牛肉面牛肉面牛肉面牛肉面"
+                android:textSize="@dimen/sp_18" />
+
+
+           <!-- <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/subscribe_recy_item_love_btn"
+                android:layout_width="45dp"
+                android:layout_height="@dimen/dp_37"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/nolove"  />-->
+            <ImageButton
+                android:id="@+id/subscribe_recy_item_love_btn"
+                android:layout_width="45dp"
+                android:layout_height="@dimen/dp_37"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/nolove"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+
+            android:layout_height="@dimen/dp_17"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/subscribe_recy_item_yueshou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="月售  570 单" />
+
+            <TextView
+                android:id="@+id/subscribe_recy_item_pingfen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="评分 5 .0 "
+                android:textColor="#fd8d57" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/subscribe_recy_item_renjun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="人均 ¥ 15 " />
+
+            <TextView
+                android:id="@+id/subscribe_recy_item_juli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="1.2km" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

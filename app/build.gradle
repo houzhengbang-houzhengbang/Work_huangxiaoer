@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.asus.huangxiaoer"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    /* android {
+        sourceSets {
+            main.jniLibs.srcDirs = ['libs']
+        }
+    }*/
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+MobSDK {
+    appKey "26d72fb372f28"
+    appSecret "6563083fa6da63204715cf42dfde6103"
+    SMSSDK {}
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //mvp 依赖库
+    implementation project(':base')
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //fresco
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+    implementation 'com.facebook.fresco:animated-gif:1.9.0'
+    implementation 'com.facebook.fresco:animated-webp:1.9.0'
+    implementation 'com.facebook.fresco:webpsupport:1.9.0'
+    //悬浮 按钮的控件
+    implementation 'com.android.support:design:27.1.1'
+    //retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    //rxjava2
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.14-RC1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    //okhttp3
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+    implementation files('libs/open_sdk_r5990_lite.jar')
+    implementation files('libs/SecurityEnvSDK-release-1.1.0.jar')
+    implementation files('libs/umeng-common-1.5.3.jar')
+    implementation files('libs/umeng-share-core-6.9.3.jar')
+    implementation files('libs/umeng-share-QQ-full-6.9.3.jar')
+    implementation files('libs/umeng-share-wechat-full-6.9.3.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.3.jar')
+    implementation files('libs/umeng-sharetool-6.9.3.jar')
+    implementation files('libs/utdid4all-1.1.5.3_proguard.jar')
+    implementation files('libs/wechat-sdk-android-without-mta-5.1.4.jar')
+    implementation project(':zxinglite')
+
+    implementation'com.hjm:BottomTabBar:1.1.1'
+}

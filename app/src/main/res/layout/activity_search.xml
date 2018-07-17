@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.SearchActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@drawable/bg"
+        android:focusable="true"
+
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/search_back"
+            android:layout_width="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:src="@drawable/back" />
+
+
+        <EditText
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:id="@+id/search_input_search"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_gravity="center"
+            android:background="@drawable/searchviewbg"
+            android:drawableRight="@drawable/subscribe_delete"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:hint="请输入 商店  菜品"
+            android:imeOptions="actionSearch"
+            android:padding="@dimen/dp_2"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/sp_14" />
+     <ImageView
+         android:id="@+id/result_search"
+         android:layout_marginLeft="@dimen/dp_10"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:src="@drawable/subscribe_sousuo"
+         />
+
+
+    </LinearLayout>
+
+
+
+    <com.example.asus.huangxiaoer.view.custom.MySearchView
+        android:id="@+id/search_flowlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingTop="@dimen/dp_10"
+        />
+    <Button
+        android:id="@+id/search_clear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="清空记录"/>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.HomeCarActivity">
+
+    <include
+        layout="@layout/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_40" />
+
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="235dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="166dp">
+
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/carnull" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="购物车里空空如也" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bgnull"
+            android:gravity="center"
+            android:onClick="home_back"
+            android:text="去点餐" />
+
+    </LinearLayout>
+</LinearLayout>

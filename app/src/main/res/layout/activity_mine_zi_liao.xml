@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.MineZiLiaoActivity">
+
+    <include
+        layout="@layout/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_40" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_140"
+
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/searchviewbg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="14dp"
+            android:text="个人信息"
+            android:textColor="@color/hui" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="49dp"
+            android:text="头像" />
+
+        <!--        <ImageView
+                    android:id="@+id/mine_zi_liao_userPhoto"
+                    android:layout_width="65dp"
+                    android:layout_height="59dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="33dp"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:background="@drawable/yuanbg"
+                    android:src="@drawable/youxiang" />-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mine_zi_liao_userPhoto"
+            android:layout_width="65dp"
+            android:layout_height="59dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="33dp"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@drawable/youxiang"
+            android:onClick="mine_zi_liao_userPhotos" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@color/hui" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="31dp"
+                android:text="用户名" />
+
+            <EditText
+                android:id="@+id/mine_zi_liao_username"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:gravity="center"
+                android:text="xxx" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="81dp"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/searchviewbg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="14dp"
+            android:text="账号绑定"
+            android:textColor="@color/hui" />
+
+        <ImageView
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginStart="29dp"
+            android:background="@drawable/yuanbg"
+            android:src="@drawable/phone" />
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/sp_15"
+            android:layout_marginLeft="@dimen/dp_65"
+            android:gravity="center"
+            android:text="手机" />
+
+        <TextView
+            android:id="@+id/mine_zi_liao_mobile"
+            android:layout_width="179dp"
+            android:layout_height="@dimen/dp_35"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginEnd="22dp"
+            android:gravity="center"
+            android:text="xxx"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/yuanbg"
+        android:gravity="center"
+        android:onClick="mine_zi_liao_user_xiugai"
+        android:text="保存"
+        android:id="@+id/btn_ziliao_save"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        android:textSize="@dimen/sp_20" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_ziliao_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/yuanbg"
+        android:gravity="center"
+        android:text="去登陆"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20" />
+</LinearLayout>

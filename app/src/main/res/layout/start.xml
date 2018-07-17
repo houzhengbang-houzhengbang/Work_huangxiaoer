@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--动画图-->
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/guide_simple_img"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/dp_307" />
+
+    <!--进入首页的按钮-->
+    <ImageButton
+        android:id="@+id/guide_ib_start"
+        android:layout_width="@dimen/dp_154"
+        android:layout_height="@dimen/dp_40"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_86"
+        android:background="@drawable/welcome"
+       />
+
+</RelativeLayout>
